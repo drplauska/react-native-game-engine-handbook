@@ -1,16 +1,16 @@
-import React from "react";
-import RigidBodies from "./rigid-bodies";
-
-export default function (mount) {
-	return {
-		heading: "Physics",
-		items: [
-			{
-				heading: "Rigid Bodies",
-				onPress: _ => mount(<RigidBodies />)
-			}
-		]
-	}
+"use strict";
+exports.__esModule = true;
+var react_1 = require("react");
+var rigid_bodies_1 = require("./rigid-bodies");
+function default_1(mount) {
+    return {
+        heading: "Physics",
+        items: [
+            {
+                heading: "Rigid Bodies",
+                onPress: function (_) { return mount(<rigid_bodies_1["default"] />); }
+            }
+        ]
+    };
 }
-
- 
+exports["default"] = default_1;

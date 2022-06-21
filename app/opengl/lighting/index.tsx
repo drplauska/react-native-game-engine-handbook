@@ -2,24 +2,23 @@ import React, { PureComponent } from "react";
 import { AppRegistry, StyleSheet, StatusBar } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import { Bunny } from "./renderers";
-import { Rotate } from "./systems"
+import { Rotate } from "./systems";
 
 export default class LightingExample extends PureComponent {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <GameEngine 
-        style={styles.container} 
+      <GameEngine
+        style={styles.container}
         systems={[Rotate]}
-        entities={{ 
-          bunny: { yaw: 0, pitch: 0, renderer: <Bunny /> }
-        }}>
-
+        entities={{
+          bunny: { yaw: 0, pitch: 0, renderer: <Bunny /> },
+        }}
+      >
         <StatusBar hidden={true} />
-
       </GameEngine>
     );
   }
@@ -28,6 +27,6 @@ export default class LightingExample extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFF"
-  }
+    backgroundColor: "#FFF",
+  },
 });

@@ -43,7 +43,7 @@ const AssignFingerToWorm = (state, { touches }) => {
 	return state;
 };
 
-const MoveWorm = (state, { touches }) => {
+const MoveWorm:  = (state, { touches }) => {
 	touches.filter(t => t.type === "move").forEach(t => {
 		let wormId = Object.keys(state).find(
 			key => state[key].touchId === t.id
